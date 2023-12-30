@@ -1,3 +1,5 @@
+[中文](/README_zh.md) | [English](/README.md)
+
 # wordpress-multiple-services-in-one
 🛳️ Manage multiple WordPress instances on a single computer with flexible multi-port configuration.
 

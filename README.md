@@ -12,16 +12,16 @@
 
 ``` shell
 
-   git clone git@github.com:BruceWind/wordpress-multiple-services-in-one.git
+git clone git@github.com:BruceWind/wordpress-multiple-services-in-one.git
 ## below is example, you can change the target directory name.
-   cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service-1/
-   cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service-2
+cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service-1/
+cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service-2
 #   Navigate to each copied directory:
 cd wordpress-multiple-services-in-one-service-1
 
 ## use nano or vis to change port mapping.
 # vi docker-compose.yml
-# and then, change 8001:80 to 8002:80
+# and then, change 8001:80 to any port you want.
 
 #   Start each service command:
 docker-compose up -d
@@ -29,16 +29,25 @@ docker-compose up -d
 # after that, you can see the service is running. 
 ```
 
-In each copied directory, modify the docker-compose.yml file:
-
-Adjust the desired HTTP port mapping for each service. For example, change 8001:80 to <your-port>:80, ensuring that each service has a unique port.
-
+It is important to modify the docker-compose.yml file:
+Adjust the desired HTTP port mapping for each service. 
 
 
 Access each WordPress instance:
 
 Open your web browser and visit http://localhost:<your-port> where <your-port> is the HTTP port you specified for each WordPress service.
 
+
+## How it works:
+
+After you start a instance of wordpress. You only expose one http port. The DB container doesn't need to expose to a port.  This is because Wordpress connect db via internal docker network. 
+
+As a result, It is not only isolated, but also safe.
+
+
+## How much memory does it take?
+
+As I tested, it takes 300 to 500MB memory for wordpress + Mysql. It is not a big deal for a modern computer
 
 
 ## Contributing

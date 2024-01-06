@@ -28,6 +28,7 @@ services:
       WORDPRESS_DB_NAME: wordpress
     volumes:
       - wp_data:/var/www/html  # define WordPress volume
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     networks:
       - backend
       - frontend

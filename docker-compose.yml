@@ -1,4 +1,4 @@
-version: '3.3' #Docker Compose 的版本
+version: '3.3' #Docker Compose version
 
 services:
   db:
@@ -27,14 +27,14 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - wp_data:/var/www/html  # 添加这行来定义 WordPress 数据卷
+      - wp_data:/var/www/html  # define WordPress volume
     networks:
       - backend
       - frontend
 
 volumes:
   db_data: {}
-  wp_data: {}  # 添加这行来创建 WordPress 数据卷
+  wp_data: {}
 
 networks:
   frontend:

@@ -10,10 +10,8 @@
 
 ## Usage
 
-1. Clone this repository to your local machine:
-
 ``` shell
-
+## Clone this repository to your local machine:
 git clone git@github.com:BruceWind/wordpress-multiple-services-in-one.git
 ## below is example, you can change the target directory name.
 cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service-1/
@@ -50,6 +48,9 @@ As a result, It is not only isolated, but also safe.
 ## How much memory does it take?
 
 As I tested, it takes 300 to 500MB memory for wordpress + Mysql. It is not a big deal for a modern computer
+
+## How to expose these port to public?
+As far as I concern, some CDN services like Cloudflare provide a service to connect your computer in LAN to WAN.
 
 
 ## Contributing

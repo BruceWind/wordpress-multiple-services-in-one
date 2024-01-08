@@ -1,7 +1,7 @@
 [中文](/README_zh.md) | [English](/README.md)
 
 # wordpress-multiple-services-in-one
-🛳️ Manage multiple WordPress instances on a single computer with flexible multi-port configuration.
+🛳️ Manage multiple WordPress instances on a single computer with flexible multi-port configuration. 
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ cp wordpress-multiple-services-in-on/ wordpress-multiple-services-in-one-service
 cd wordpress-multiple-services-in-one-service-1
 
 ## use nano or vis to change port mapping.
-# vi docker-compose.yml
+vi docker-compose.yml
 # and then, change 8001:80 to any port you want.
 
 #   Start each service command:
@@ -35,7 +35,7 @@ Adjust the desired HTTP port mapping for each service.
 
 Access each WordPress instance:
 
-Open your web browser and visit http://localhost:<your-port> where <your-port> is the HTTP port you specified for each WordPress service.
+Open your web browser and visit http://localhost:{your-port} where <your-port> is the HTTP port you specified for each WordPress service.
 
 
 ## How it works:
@@ -50,7 +50,7 @@ As a result, It is not only isolated, but also safe.
 As I tested, it takes 300 to 500MB memory for wordpress + Mysql. It is not a big deal for a modern computer
 
 ## How to expose these port to public?
-As far as I concern, some CDN services like Cloudflare provide a service to connect your computer in LAN to WAN.
+As far as I concern, some CDN services like Cloudflare provide a service to connect your computer in LAN to WAN. Or, you can try other **Internal Network Tunneling Service**.
 
 
 ## Contributing

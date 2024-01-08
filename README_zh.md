@@ -29,11 +29,11 @@ docker-compose up -d
 # 完成后，您可以看到服务正在运行。
 ```
 
-重要的是修改 docker-compose.yml 文件： 调整每个服务的所需 HTTP 端口映射。
+重要的是修改 docker-compose.yml 文件： 调整每个服务的所需 HTTP 端口映射。 因为多个worpress服务使用同一个内网IP的不同端口，你同时需要内网穿透服务。
 
 ### 访问每个 WordPress 实例：
 
-在您的 Web 浏览器中打开并访问 http://localhost:<your-port>，其中 <your-port> 是您为每个 WordPress 服务指定的 HTTP 端口。
+在您的 Web 浏览器中打开并访问 http://localhost{<your-port}，其中 <your-port> 是您为每个 WordPress 服务指定的 HTTP 端口。
 
 
 ### 工作原理：

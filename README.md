@@ -50,8 +50,7 @@ As a result, It is not only isolated, but also safe.
 As I tested, it takes 300 to 500MB memory for wordpress + Mysql. It is not a big deal for a modern computer
 
 ## How to expose these port to public?
-As far as I concern, some CDN services like Cloudflare provide a service to connect your computer in LAN to WAN. Or, you can try other **Internal Network Tunneling Service**.
-
+As far as I’m concerned, some CDN services, like Cloudflare, provide a service to connect your computer in a LAN to a WAN. Alternatively, you can try other internal network tunneling services.
 
 ## Contributing
 
